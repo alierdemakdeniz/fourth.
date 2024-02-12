@@ -415,6 +415,139 @@ a {
 .line-through {
     text-decoration: line-through;
 }
+/*-----------------------------popup--------------------------------*/
+.popup-background{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1001;
+    background-color: #3333338a;
+    transform: scale(0);
+}
+.popup-background.active{
+    transform: scale(1);
+
+}
+
+.popup{
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 872px;
+    height: 540px;
+    z-index: 2000;
+}
+
+.popup-img{
+    width: 50%;
+    height: 540px;
+    
+}
+.popup-img img{
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.popup-text{
+    background-color: #fff;
+    width: 50%;
+    height: 540px;
+    display: grid;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 185px 24px;
+}
+.popup-head{
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    color: #333333;
+}
+.popup-intext{
+    
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #333333;
+}
+.btn-popup{
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    color: #658C4A;
+    background-color: #E7CEC0;
+    padding: 15px 30px;
+    border-radius: 25px;
+    text-align: center;
+    transition: all 1s linear;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn-popup:hover{
+    background-color: #FFEFE5;
+    
+
+}
+.close-btn{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 15px;
+    cursor: pointer;
+}
+@media screen and (max-width: 378px) {
+    .popup{
+        display: flex;
+        position: fixed;
+        width: 344px;
+        height: 189px;
+    }
+    .popup-img{
+        display: none;
+    }
+    .popup-text{
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+        padding: 24px 15px 24px 16px; 
+    }
+    .popup-head{
+        font-size: 20px;
+    }
+    .popup-intext{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .btn-popup{
+        font-size: 14px;
+        line-height: 20px;
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*--------------------------------nav-head---------------------------------------------------*/
 .nav-head {
     width: 144rem;
@@ -911,35 +1044,7 @@ a {
     font-size: 12px;
     line-height: 16px;
 }
-
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media(max-width:378px) {
     #newArrival {
